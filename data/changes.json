@@ -1,0 +1,54 @@
+[
+  {
+    "change_id": "deploy-001",
+    "service": "payment-api",
+    "change_type": "deployment",
+    "version": "v2.3.1",
+    "previous_version": "v2.3.0",
+    "message": "Deployment started: payment-api:v2.3.1",
+    "author": "deploy-bot",
+    "timestamp": "2024-01-15T14:20:00Z"
+  },
+  {
+    "change_id": "config-001",
+    "service": "payment-api",
+    "change_type": "config_change",
+    "config_key": "db_pool_size",
+    "old_value": "50",
+    "new_value": "20",
+    "message": "Connection pool size reduced",
+    "author": "config-bot",
+    "timestamp": "2024-01-15T14:22:00Z"
+  },
+  {
+    "change_id": "deploy-002",
+    "service": "checkout-service",
+    "change_type": "deployment",
+    "version": "v1.8.2",
+    "previous_version": "v1.8.1",
+    "message": "Deployment started: checkout-service:v1.8.2",
+    "author": "deploy-bot",
+    "timestamp": "2024-01-15T13:45:00Z"
+  },
+  {
+    "change_id": "rollback-001",
+    "service": "payment-api",
+    "change_type": "rollback",
+    "version": "v2.3.0",
+    "rolled_back_from": "v2.3.1",
+    "message": "Rollback initiated: payment-api:v2.3.1 -> v2.3.0",
+    "author": "oncall-sre",
+    "timestamp": "2024-01-15T14:45:00Z"
+  },
+  {
+    "change_id": "config-002",
+    "service": "payment-api",
+    "change_type": "config_change",
+    "config_key": "db_pool_size",
+    "old_value": "20",
+    "new_value": "50",
+    "message": "Connection pool size restored",
+    "author": "oncall-sre",
+    "timestamp": "2024-01-15T14:46:00Z"
+  }
+]

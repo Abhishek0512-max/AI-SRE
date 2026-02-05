@@ -1,0 +1,51 @@
+[
+  {
+    "service": "payment-api",
+    "metric_name": "latency_p99",
+    "value": 450,
+    "unit": "ms",
+    "timestamp": "2024-01-15T14:25:00Z"
+  },
+  {
+    "service": "payment-api",
+    "metric_name": "latency_p99",
+    "value": 2450,
+    "unit": "ms",
+    "timestamp": "2024-01-15T14:30:00Z"
+  },
+  {
+    "service": "payment-api",
+    "metric_name": "error_rate",
+    "value": 0.2,
+    "unit": "percent",
+    "timestamp": "2024-01-15T14:25:00Z"
+  },
+  {
+    "service": "payment-api",
+    "metric_name": "error_rate",
+    "value": 15.2,
+    "unit": "percent",
+    "timestamp": "2024-01-15T14:30:00Z"
+  },
+  {
+    "service": "payment-api",
+    "metric_name": "error_rate",
+    "value": 22.5,
+    "unit": "percent",
+    "timestamp": "2024-01-15T14:35:00Z"
+  },
+  {
+    "service": "postgres-primary",
+    "metric_name": "db_connections",
+    "value": 45,
+    "unit": "count",
+    "timestamp": "2024-01-15T14:25:00Z"
+  },
+  {
+    "service": "postgres-primary",
+    "metric_name": "db_connections",
+    "value": 98,
+    "unit": "count",
+    "timestamp": "2024-01-15T14:35:00Z"
+  }
+]

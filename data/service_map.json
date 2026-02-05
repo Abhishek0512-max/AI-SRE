@@ -1,0 +1,30 @@
+{
+  "payment-api": {
+    "dependencies": ["postgres-primary", "redis-cache"],
+    "dependents": ["checkout-service", "notification-service"]
+  },
+  "postgres-primary": {
+    "dependencies": [],
+    "dependents": ["payment-api", "order-service"]
+  },
+  "checkout-service": {
+    "dependencies": ["payment-api"],
+    "dependents": []
+  },
+  "notification-service": {
+    "dependencies": ["payment-api", "email-service"],
+    "dependents": []
+  },
+  "redis-cache": {
+    "dependencies": [],
+    "dependents": ["payment-api"]
+  },
+  "email-service": {
+    "dependencies": [],
+    "dependents": ["notification-service"]
+  },
+  "order-service": {
+    "dependencies": ["postgres-primary"],
+    "dependents": []
+  }
+}

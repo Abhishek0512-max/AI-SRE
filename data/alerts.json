@@ -1,0 +1,26 @@
+[
+  {
+    "alert_id": "alert-001",
+    "service": "payment-api",
+    "severity": "critical",
+    "alert_type": "latency",
+    "message": "P99 latency exceeded threshold: 2450ms > 500ms",
+    "timestamp": "2024-01-15T14:30:00Z"
+  },
+  {
+    "alert_id": "alert-002",
+    "service": "payment-api",
+    "severity": "high",
+    "alert_type": "error_rate",
+    "message": "Error rate spike: 15.2% > 5%",
+    "timestamp": "2024-01-15T14:32:00Z"
+  },
+  {
+    "alert_id": "alert-003",
+    "service": "postgres-primary",
+    "severity": "medium",
+    "alert_type": "connectivity",
+    "message": "Connection pool utilization: 98%",
+    "timestamp": "2024-01-15T14:35:00Z"
+  }
+]

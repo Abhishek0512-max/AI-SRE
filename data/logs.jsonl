@@ -1,0 +1,63 @@
+{"service": "payment-api", "level": "INFO", "message": "Server started on port 8080", "timestamp": "2024-01-15T14:00:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Health check: OK", "timestamp": "2024-01-15T14:05:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Processing request: POST /v1/payments", "timestamp": "2024-01-15T14:10:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Request completed in 45ms", "timestamp": "2024-01-15T14:10:01Z"}
+{"service": "postgres-primary", "level": "INFO", "message": "Connection pool stats: 25/50 active", "timestamp": "2024-01-15T14:10:00Z"}
+{"service": "checkout-service", "level": "INFO", "message": "Order processed: order-12345", "timestamp": "2024-01-15T14:12:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Health check: OK", "timestamp": "2024-01-15T14:15:00Z"}
+{"service": "notification-service", "level": "INFO", "message": "Email queue processed: 150 messages", "timestamp": "2024-01-15T14:15:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Deployment starting: payment-api:v2.3.1", "timestamp": "2024-01-15T14:20:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Stopping old instance gracefully", "timestamp": "2024-01-15T14:20:05Z"}
+{"service": "payment-api", "level": "INFO", "message": "New instance starting with updated config", "timestamp": "2024-01-15T14:20:30Z"}
+{"service": "payment-api", "level": "INFO", "message": "Loading configuration from configmap", "timestamp": "2024-01-15T14:21:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "Config change detected: db_pool_size changed from 50 to 20", "timestamp": "2024-01-15T14:22:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Initializing database connection pool with size=20", "timestamp": "2024-01-15T14:22:01Z"}
+{"service": "payment-api", "level": "INFO", "message": "Connection pool initialized successfully", "timestamp": "2024-01-15T14:22:05Z"}
+{"service": "payment-api", "level": "INFO", "message": "Deployment complete: payment-api:v2.3.1", "timestamp": "2024-01-15T14:22:10Z"}
+{"service": "payment-api", "level": "INFO", "message": "Health check: OK", "timestamp": "2024-01-15T14:23:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Processing request: POST /v1/payments", "timestamp": "2024-01-15T14:24:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Request completed in 120ms", "timestamp": "2024-01-15T14:24:01Z"}
+{"service": "payment-api", "level": "INFO", "message": "Connection pool stats: 15/20 active", "timestamp": "2024-01-15T14:25:00Z"}
+{"service": "notification-service", "level": "INFO", "message": "Processing notification queue", "timestamp": "2024-01-15T14:25:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "Request latency elevated: 450ms", "timestamp": "2024-01-15T14:26:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "Connection pool utilization high: 18/20 (90%)", "timestamp": "2024-01-15T14:27:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "Request queued waiting for db connection", "timestamp": "2024-01-15T14:27:30Z"}
+{"service": "payment-api", "level": "WARN", "message": "Connection pool nearing capacity: 19/20", "timestamp": "2024-01-15T14:28:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "P99 latency increasing: 850ms", "timestamp": "2024-01-15T14:28:30Z"}
+{"service": "payment-api", "level": "WARN", "message": "Connection pool exhausted: 20/20", "timestamp": "2024-01-15T14:29:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "Request waiting for connection: 2500ms", "timestamp": "2024-01-15T14:29:30Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Failed to acquire database connection: timeout after 5000ms", "metadata": {"error_type": "connection_timeout", "request_id": "req-001"}, "timestamp": "2024-01-15T14:30:00Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Transaction failed: database connection unavailable", "metadata": {"error_type": "connection_unavailable", "request_id": "req-002"}, "timestamp": "2024-01-15T14:30:15Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Failed to acquire database connection: timeout after 5000ms", "metadata": {"error_type": "connection_timeout", "request_id": "req-003"}, "timestamp": "2024-01-15T14:30:30Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Payment processing failed: no db connection", "metadata": {"error_type": "payment_failed", "request_id": "req-004"}, "timestamp": "2024-01-15T14:30:45Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Failed to acquire database connection: timeout after 5000ms", "metadata": {"error_type": "connection_timeout", "request_id": "req-005"}, "timestamp": "2024-01-15T14:31:00Z"}
+{"service": "payment-api", "level": "ERROR", "message": "HTTP 500 returned to client", "metadata": {"error_type": "http_500", "request_id": "req-005"}, "timestamp": "2024-01-15T14:31:01Z"}
+{"service": "checkout-service", "level": "WARN", "message": "Upstream payment-api response slow: 4500ms", "timestamp": "2024-01-15T14:31:30Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Failed to acquire database connection: timeout after 5000ms", "metadata": {"error_type": "connection_timeout", "request_id": "req-006"}, "timestamp": "2024-01-15T14:31:45Z"}
+{"service": "payment-api", "level": "ERROR", "message": "HTTP 500 returned to client", "metadata": {"error_type": "http_500", "request_id": "req-006"}, "timestamp": "2024-01-15T14:31:46Z"}
+{"service": "checkout-service", "level": "ERROR", "message": "Upstream service payment-api returned HTTP 500", "metadata": {"error_type": "upstream_failure"}, "timestamp": "2024-01-15T14:32:00Z"}
+{"service": "checkout-service", "level": "WARN", "message": "Retrying payment-api request (attempt 2/3)", "timestamp": "2024-01-15T14:32:05Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Circuit breaker opened for database connections", "metadata": {"error_type": "circuit_breaker"}, "timestamp": "2024-01-15T14:32:30Z"}
+{"service": "checkout-service", "level": "ERROR", "message": "Payment failed after 3 retries", "metadata": {"error_type": "retry_exhausted"}, "timestamp": "2024-01-15T14:32:45Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Rejecting requests: circuit breaker open", "metadata": {"error_type": "circuit_breaker"}, "timestamp": "2024-01-15T14:33:00Z"}
+{"service": "postgres-primary", "level": "WARN", "message": "High connection count from payment-api: 20 connections", "timestamp": "2024-01-15T14:33:00Z"}
+{"service": "payment-api", "level": "ERROR", "message": "Health check: UNHEALTHY - db connection failed", "metadata": {"error_type": "health_check_failed"}, "timestamp": "2024-01-15T14:33:30Z"}
+{"service": "postgres-primary", "level": "WARN", "message": "Connection wait queue growing: 15 pending", "timestamp": "2024-01-15T14:34:00Z"}
+{"service": "notification-service", "level": "WARN", "message": "Failed to send payment confirmation: payment-api unavailable", "timestamp": "2024-01-15T14:34:00Z"}
+{"service": "postgres-primary", "level": "ERROR", "message": "Connection pool saturated: rejecting new connections", "metadata": {"error_type": "pool_exhausted"}, "timestamp": "2024-01-15T14:35:00Z"}
+{"service": "payment-api", "level": "ERROR", "message": "All database connections in use, request failed", "metadata": {"error_type": "connection_exhausted", "request_id": "req-020"}, "timestamp": "2024-01-15T14:35:30Z"}
+{"service": "checkout-service", "level": "ERROR", "message": "Order checkout failed: payment service unavailable", "metadata": {"error_type": "checkout_failed", "order_id": "order-67890"}, "timestamp": "2024-01-15T14:36:00Z"}
+{"service": "payment-api", "level": "WARN", "message": "SRE initiated rollback procedure", "timestamp": "2024-01-15T14:44:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Rollback starting: payment-api:v2.3.1 -> v2.3.0", "timestamp": "2024-01-15T14:45:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Stopping instance v2.3.1", "timestamp": "2024-01-15T14:45:05Z"}
+{"service": "payment-api", "level": "INFO", "message": "Starting instance v2.3.0", "timestamp": "2024-01-15T14:45:30Z"}
+{"service": "payment-api", "level": "INFO", "message": "Restoring config: db_pool_size = 50", "timestamp": "2024-01-15T14:46:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Connection pool initialized with size=50", "timestamp": "2024-01-15T14:46:05Z"}
+{"service": "payment-api", "level": "INFO", "message": "Rollback complete: payment-api:v2.3.0", "timestamp": "2024-01-15T14:46:30Z"}
+{"service": "payment-api", "level": "INFO", "message": "Circuit breaker reset: accepting requests", "timestamp": "2024-01-15T14:47:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Health check: OK", "timestamp": "2024-01-15T14:48:00Z"}
+{"service": "postgres-primary", "level": "INFO", "message": "Connection pool stats: 18/50 active - normalized", "timestamp": "2024-01-15T14:48:00Z"}
+{"service": "payment-api", "level": "INFO", "message": "Request completed in 52ms", "timestamp": "2024-01-15T14:49:00Z"}
+{"service": "checkout-service", "level": "INFO", "message": "Payment-api responding normally", "timestamp": "2024-01-15T14:49:30Z"}
+{"service": "payment-api", "level": "INFO", "message": "P99 latency stabilized: 65ms", "timestamp": "2024-01-15T14:50:00Z"}
+{"service": "notification-service", "level": "INFO", "message": "Resumed sending payment confirmations", "timestamp": "2024-01-15T14:50:00Z"}
